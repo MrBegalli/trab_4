@@ -1,0 +1,32 @@
+import matplotlib.pyplot as plt
+
+# Dados de exemplo (substitua pelos dados reais obtidos nos seus testes)
+tamanhos = [100, 1000, 10000, 50000, 100000]
+
+# Tempos de execução para cada algoritmo (em segundos ou milissegundos)
+selection_sort = [0.002, 0.03, 0.5, 25, 350]
+insertion_sort = [0.001, 0.02, 0.4, 20, 300]
+bubble_sort = [0.002, 0.03, 0.6, 30, 400]
+merge_sort = [0.0005, 0.005, 0.05, 2, 40]
+quick_sort = [0.0004, 0.004, 0.04, 1.8, 35]
+heap_sort = [0.0006, 0.008, 0.06, 3, 50]
+
+# Criando o gráfico
+plt.figure(figsize=(10, 6))
+
+plt.plot(tamanhos, selection_sort, label='Selection Sort', marker='o', color='r')
+plt.plot(tamanhos, insertion_sort, label='Insertion Sort', marker='s', color='g')
+plt.plot(tamanhos, bubble_sort, label='Bubble Sort', marker='^', color='b')
+plt.plot(tamanhos, merge_sort, label='Merge Sort', marker='x', color='purple')
+plt.plot(tamanhos, quick_sort, label='Quick Sort', marker='d', color='orange')
+plt.plot(tamanhos, heap_sort, label='Heap Sort', marker='p', color='brown')
+
+# Adicionando título e labels
+plt.title('Comparação de Algoritmos de Ordenação - Tempo de Execução vs. Tamanho da Entrada')
+plt.xlabel('Tamanho da Entrada')
+plt.ylabel('Tempo de Execução (segundos)')
+plt.legend()
+plt.grid(True)
+
+# Exibindo o gráfico
+plt.show()
